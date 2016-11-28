@@ -146,6 +146,7 @@ func DeepCopy_componentconfig_KubeProxyConfiguration(in interface{}, out interfa
 		out.HealthzBindAddress = in.HealthzBindAddress
 		out.HealthzPort = in.HealthzPort
 		out.HostnameOverride = in.HostnameOverride
+		out.NodenameOverride = in.NodenameOverride
 		if in.IPTablesMasqueradeBit != nil {
 			in, out := &in.IPTablesMasqueradeBit, &out.IPTablesMasqueradeBit
 			*out = new(int32)
@@ -250,6 +251,7 @@ func DeepCopy_componentconfig_KubeletConfiguration(in interface{}, out interface
 		out.Authentication = in.Authentication
 		out.Authorization = in.Authorization
 		out.HostnameOverride = in.HostnameOverride
+		out.NodenameOverride = in.NodenameOverride
 		out.PodInfraContainerImage = in.PodInfraContainerImage
 		out.DockerEndpoint = in.DockerEndpoint
 		out.RootDirectory = in.RootDirectory

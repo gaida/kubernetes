@@ -66,6 +66,7 @@ func autoConvert_v1alpha1_KubeProxyConfiguration_To_componentconfig_KubeProxyCon
 	out.HealthzBindAddress = in.HealthzBindAddress
 	out.HealthzPort = in.HealthzPort
 	out.HostnameOverride = in.HostnameOverride
+        out.NodenameOverride = in.NodenameOverride
 	out.IPTablesMasqueradeBit = (*int32)(unsafe.Pointer(in.IPTablesMasqueradeBit))
 	out.IPTablesSyncPeriod = in.IPTablesSyncPeriod
 	out.IPTablesMinSyncPeriod = in.IPTablesMinSyncPeriod
@@ -95,6 +96,7 @@ func autoConvert_componentconfig_KubeProxyConfiguration_To_v1alpha1_KubeProxyCon
 	out.HealthzBindAddress = in.HealthzBindAddress
 	out.HealthzPort = in.HealthzPort
 	out.HostnameOverride = in.HostnameOverride
+	out.NodenameOverride = in.NodenameOverride
 	out.IPTablesMasqueradeBit = (*int32)(unsafe.Pointer(in.IPTablesMasqueradeBit))
 	out.IPTablesSyncPeriod = in.IPTablesSyncPeriod
 	out.IPTablesMinSyncPeriod = in.IPTablesMinSyncPeriod
@@ -269,6 +271,7 @@ func autoConvert_v1alpha1_KubeletConfiguration_To_componentconfig_KubeletConfigu
 		return err
 	}
 	out.HostnameOverride = in.HostnameOverride
+	out.NodenameOverride = in.NodenameOverride
 	out.PodInfraContainerImage = in.PodInfraContainerImage
 	out.DockerEndpoint = in.DockerEndpoint
 	out.RootDirectory = in.RootDirectory
@@ -438,6 +441,7 @@ func autoConvert_componentconfig_KubeletConfiguration_To_v1alpha1_KubeletConfigu
 		return err
 	}
 	out.HostnameOverride = in.HostnameOverride
+	out.NodenameOverride = in.NodenameOverride
 	out.PodInfraContainerImage = in.PodInfraContainerImage
 	out.DockerEndpoint = in.DockerEndpoint
 	out.RootDirectory = in.RootDirectory

@@ -137,6 +137,7 @@ func (s *KubeletServer) AddFlags(fs *pflag.FlagSet) {
 		"On success, a kubeconfig file referencing the generated key and obtained certificate is written to the path specified by --kubeconfig. "+
 		"The certificate and key file will be stored in the directory pointed by --cert-dir.")
 	fs.StringVar(&s.HostnameOverride, "hostname-override", s.HostnameOverride, "If non-empty, will use this string as identification instead of the actual hostname.")
+	fs.StringVar(&s.NodenameOverride, "nodename-override", s.NodenameOverride, "If non-empty, will use this string as identification and override any hostname / cloud provider settings.")
 	fs.StringVar(&s.PodInfraContainerImage, "pod-infra-container-image", s.PodInfraContainerImage, "The image whose network/ipc namespaces containers in each pod will use.")
 	fs.StringVar(&s.DockerEndpoint, "docker-endpoint", s.DockerEndpoint, "Use this for the docker endpoint to communicate with")
 	fs.StringVar(&s.RootDirectory, "root-dir", s.RootDirectory, "Directory path for managing kubelet files (volume mounts,etc).")

@@ -35,6 +35,9 @@ type KubeProxyConfiguration struct {
 	HealthzPort int32 `json:"healthzPort"`
 	// hostnameOverride, if non-empty, will be used as the identity instead of the actual hostname.
 	HostnameOverride string `json:"hostnameOverride"`
+	// nodenameOverride is the name of the node used to identify the kubelet
+	// instead of the actual hostname of cloud provider setting.
+	NodenameOverride string `json:"nodenameOverride"`
 	// iptablesMasqueradeBit is the bit of the iptables fwmark space to use for SNAT if using
 	// the pure iptables proxy mode. Values must be within the range [0, 31].
 	IPTablesMasqueradeBit *int32 `json:"iptablesMasqueradeBit"`
@@ -221,6 +224,9 @@ type KubeletConfiguration struct {
 	// hostnameOverride is the hostname used to identify the kubelet instead
 	// of the actual hostname.
 	HostnameOverride string `json:"hostnameOverride"`
+	// nodenameOverride is the name of the node used to identify the kubelet
+	// instead of the actual hostname of cloud provider setting.
+	NodenameOverride string `json:"nodenameOverride"`
 	// podInfraContainerImage is the image whose network/ipc namespaces
 	// containers in each pod will use.
 	PodInfraContainerImage string `json:"podInfraContainerImage"`

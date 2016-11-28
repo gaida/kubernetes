@@ -300,6 +300,9 @@ func initConfigz(kc *componentconfig.KubeletConfiguration) (*configz.Config, err
 }
 
 func run(s *options.KubeletServer, kubeDeps *kubelet.KubeletDeps) (err error) {
+
+	fmt.Println(s.HostnameOverride)
+
 	// TODO: this should be replaced by a --standalone flag
 	standaloneMode := (len(s.APIServerList) == 0 && !s.RequireKubeConfig)
 
